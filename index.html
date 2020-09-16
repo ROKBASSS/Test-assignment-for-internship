@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание на стажировку</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1>Тестовое задание Javascript</h1>
+        <label for="firstNameCheck">Имя</label>
+        <input name="column" type="checkbox" id="firstNameCheck" value="0" onClick="toggle_column('table', this.value);" checked />
+        <label for="firstNameCheck">Фамилия</label>
+        <input name="column" type="checkbox" id="lastNameCheck" value="1" onClick="toggle_column('table', this.value);" checked />
+        <label for="aboutCheck">О пользователе</label>
+        <input name="column" type="checkbox" id="aboutCheck" value="2" onClick="toggle_column('table', this.value);" checked />
+        <label for="eyeColorCheck">Цвет глаз</label>
+        <input name="column" type="checkbox" id="eyeColorCheck"  value="3" onClick="toggle_column('table', this.value);" checked />
+        <hr>
+        <div class="table">
+            <table id="table">
+                <thead id="table_head">
+                    <tr>
+                        <th>
+                            <a href='javascript:sorting("firstName");'>Имя</a>
+                        </th>
+                        <th>
+                            <a href='javascript:sorting("lastName");'>Фамилия</a>
+                        </th>
+                        <th>
+                            <a href='javascript:sorting("about");'>О пользователе</a>
+                        </th>
+                        <th>
+                            <a href='javascript:sorting("eyeColor");'>Цвет глаз</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                    <tr>
+                        <td>requesting data...</td>
+                        <td>requesting data...</td>
+                        <td>requesting data...</td>
+                        <td>requesting data...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </center>
+</body>
+
+</html>
