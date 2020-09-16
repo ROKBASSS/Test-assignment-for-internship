@@ -11,12 +11,7 @@
 - В колонке "eyeColor" предоставлять данные в виде цвета, сохраняя возможность сортировки по значению.
 
 ### Heroku
-Посмотреть можно здесь
-```url
-    https://peopleeyes.herokuapp.com/
-```
+Посмотреть можно здесь [peopleeyes.herokuapp.com](https://peopleeyes.herokuapp.com/).
+
 ### GitHub Pages
-Посмотреть можно здесь
-```url
-    https://rokbasss.github.io/
-```
+Посмотреть можно здесь [rokbasss.github.io](https://rokbasss.github.io/).
