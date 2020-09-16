@@ -11,14 +11,12 @@
 - В колонке "eyeColor" предоставлять данные в виде цвета, сохраняя возможность сортировки по значению.
 
 ### Heroku
-Посмотреть можно здесь - [](http://example.com/).
-```html
-<div class="as-header">
-    <h1>Матрёшка</h1>
-    <p>Lorem ipsum dolor sit amet.</p>
-</div>
+Посмотреть можно здесь
+```url
+    https://peopleeyes.herokuapp.com/
 ```
-
-```javascript
-    $(function() { ... });
+### GitHub Pages
+Посмотреть можно здесь
+```url
+    https://rokbasss.github.io/
 ```
