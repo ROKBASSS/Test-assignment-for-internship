@@ -4,32 +4,10 @@ let pages; // Количество страниц
 let elements; // Количество отображаемых элементов
 // Создаем асинхронную функция для считывания данных из файла
 const getData = async () => {
-    const response = await fetch("/json/data.json"); // get users list
-    const data = await response.json(); // parse JSON
-    return data;
+    const response = await fetch("/json/data.json"); // Получить данные из файла
+    const data = await response.json(); // Распилить JSON
+    return data; // Возвращаем данные в глобаль
 };
-
-function toggle_column(table, node) {
-    let table_body = document.getElementById('table_body');
-    let rows = table_body.getElementsByTagName('tr');
-    let table_head = document.getElementById('table_head');
-    let head_rows = table_head.getElementsByTagName('tr');
-
-    for (let row of head_rows) {
-        let td = row.getElementsByTagName('th');
-        if (td[node].style.display != "none") td[node].style.display = "none"
-        else td[node].style.display = "table-cell";
-    };
-    for (let row of rows) {
-        let td = row.childNodes[node];
-        if (td.style.display != "none") td.style.display = "none"
-        else td.style.display = "table-cell";
-    };
-    // for (var row=0; row<rows.length;row++) {
-    //     let cels = rows[row].getElementsByTagName('td');
-    //     cels[column_nr].style.display=cels[column_nr].style.display=="none" ? "" : "none";
-    // }
-}
 
 // После полной загрузки окна ожидаем получения данных из запроса, затем отрисовываем контент их запроса
 window.onload = async function () {
@@ -44,7 +22,7 @@ function render(data) {
         pages = Number(document.getElementById("pages").value);
         elements = Number(document.getElementById("elements").value);
     } catch (error) {
-    // console.log(error);        
+        // console.log(error); обхожу ошибку не обнаружения pages и elements, так как они есть в глобали        
     }
     document.body.innerHTML = `<center><h1>Тестовое задание Javascript</h1>
     <label for="firstNameCheck">Имя</label>
@@ -68,10 +46,10 @@ function render(data) {
     </tbody>
     </table>
     </div>
-    </center>`;
+    </center>`; // Отрисовка примитивов интерфейса
 
-    let table = document.getElementById("table_body");
-    let table_head = document.getElementById("table_head");
+    let table = document.getElementById("table_body"); // Получаем тело таблицы
+    let table_head = document.getElementById("table_head"); // Получаем заголовки таблицы
     table_head.innerHTML = `
     <th>
         <a href='javascript:sorting("firstName");'>Имя</a>
@@ -85,13 +63,13 @@ function render(data) {
     <th>
         <a href='javascript:sorting("eyeColor");'>Цвет глаз</a>
     </th>`;
-
-    let tr = "";
-    let number = 0
-    let startIndex = (pages-1) * elements;
-    let endIndex = startIndex + elements;
-    var pageWisePersonData = data.slice(startIndex,endIndex);
-
+    // Обновляем заголовки таблицы
+    let tr = ""; // Генерируем пустую строку
+    let number = 0 // Берем итерируемую переменную
+    let startIndex = (pages - 1) * elements; // Индекс стартового элемента
+    let endIndex = startIndex + elements; // Последний индекс элемента
+    let pageWisePersonData = data.slice(startIndex, endIndex); // Вырезаем нужный кусок из данных
+    // Перебераем массив полученных данных
     pageWisePersonData.forEach(element => {
         tr += '<tr id="' + String(element.id) + '">';
         // tr += '<td>' + element.id + '</td>'
@@ -103,18 +81,13 @@ function render(data) {
         tr += '</tr>';
         number += 1
     });
+    // Присваиваем телу таблицы наши строки
     table.innerHTML = tr;
+    // Подключяем к строкам события для обработки
     load_events();
-}
-
-function load_events() {
-    let table_tr = document.getElementsByTagName("td");
-    for (let element of table_tr) {
-        element.onmouseover = element.onmouseout = element.onclick = handler;
-    }
 };
 
-
+// Сортировка по полю
 function sorting(filter) {
     if (filter == "firstName") {
         data.sort(function (a, b) {
@@ -158,21 +131,35 @@ function sorting(filter) {
     };
 
     render(data);
-}
+};
 
+// Привязка событий к обработчику (наведении на строку)
+function load_events() {
+    let table_tr = document.getElementsByTagName("td");
+    for (let element of table_tr) {
+        element.onmouseover = element.onmouseout = element.onclick = handler;
+    }
+};
+
+// Обработчик событий
 function handler(event) {
     let target = event.target.closest('tr');
+    // Находим ближайшую строку к выбранной ячейке
     if (event.type == 'mouseover') {
+        // При наведении красим строку светлосерый
         target.style.background = 'LightGray';
     }
     if (event.type == 'mouseout') {
+        // При выходе мыши, убираем краску
         target.style.background = '';
     }
     if (event.type == 'click') {
+        // (Attention!) При нажатии на ячейку может быть два события, щелчок на ссылку отрабатывает, щелчок на строку отрабатывает
         if (event.target.nodeName != "A") show_editing(target);
     }
-}
+};
 
+// Отрисовываем поля для изменения и кнопки
 function show_editing(target) {
     document.body.innerHTML = "";
     document.body.innerHTML = render_edit(target);
@@ -182,8 +169,29 @@ function show_editing(target) {
     document.getElementById("reset").onclick = function () {
         show_editing(target);
     }
-}
+};
 
+// Скрытие колонок
+function toggle_column(table, node) {
+    let table_body = document.getElementById('table_body');
+    let rows = table_body.getElementsByTagName('tr');
+    let table_head = document.getElementById('table_head');
+    let head_rows = table_head.getElementsByTagName('tr');
+    // Поиск в заголовках по номеру
+    for (let row of head_rows) {
+        let td = row.getElementsByTagName('th');
+        if (td[node].style.display != "none") td[node].style.display = "none"
+        else td[node].style.display = "table-cell";
+    };
+    // Поисках в строках по номеру
+    for (let row of rows) {
+        let td = row.childNodes[node];
+        if (td.style.display != "none") td.style.display = "none"
+        else td.style.display = "table-cell";
+    };
+};
+
+// Отрисовка полей и привязка событий для обработки кнопок
 function render_edit(target) {
     let element = find_data(target.id);
     let html = '<center><div class="table"><table><thead id="table_head"><tr><th>ID</th><th>Имя</th><th>Фамилия</th><th>Номер телефона</th><th>О себе</th><th>Цвет глаз</th></tr></thead><tbody id="table_body">';
@@ -198,8 +206,7 @@ function render_edit(target) {
     return html
 };
 
-
-
+// Поиск данных по ID из скрытого id строки tr
 function find_data(id) {
     let value = ""
     data.forEach(element => {
@@ -210,6 +217,7 @@ function find_data(id) {
     return value;
 };
 
+// Три точки... 
 function show_me(eventer) {
     let moreText = document.getElementById("more" + String(eventer));
     let btnText = document.getElementById("myBtn" + String(eventer));
