@@ -1,5 +1,7 @@
 "use strict"; // Используем строгий режим для учёта областей видимости
 let data; // Создаём глобальную переменную для данных хранимых с файла
+let pages; // Количество страниц
+let elements; // Количество отображаемых элементов
 // Создаем асинхронную функция для считывания данных из файла
 const getData = async () => {
     const response = await fetch("/json/data.json"); // get users list
@@ -35,8 +37,15 @@ window.onload = async function () {
     data = load_data;
     render(data);
 };
+
 // Функция отрисовки данных из глобали
 function render(data) {
+    try {
+        pages = Number(document.getElementById("pages").value);
+        elements = Number(document.getElementById("elements").value);
+    } catch (error) {
+    // console.log(error);        
+    }
     document.body.innerHTML = `<center><h1>Тестовое задание Javascript</h1>
     <label for="firstNameCheck">Имя</label>
     <input name="column" type="checkbox" id="firstNameCheck" value="0" onClick="toggle_column('table', this.value);" checked />
@@ -46,6 +55,10 @@ function render(data) {
     <input name="column" type="checkbox" id="aboutCheck" value="2" onClick="toggle_column('table', this.value);" checked />
     <label for="eyeColorCheck">Цвет глаз</label>
     <input name="column" type="checkbox" id="eyeColorCheck"  value="3" onClick="toggle_column('table', this.value);" checked />
+    <label for="pages">Номер страницы</label>
+    <input name="column" type="number" id="pages" value="`+ pages + `" onchange="render(data);" />
+    <label for="elements">Количество элементов</label>
+    <input name="column" type="number" id="elements" value="`+ elements + `" onchange="render(data);" />
     <hr>
     <div class="table">
     <table id="table">
@@ -75,7 +88,11 @@ function render(data) {
 
     let tr = "";
     let number = 0
-    data.forEach(element => {
+    let startIndex = (pages-1) * elements;
+    let endIndex = startIndex + elements;
+    var pageWisePersonData = data.slice(startIndex,endIndex);
+
+    pageWisePersonData.forEach(element => {
         tr += '<tr id="' + String(element.id) + '">';
         // tr += '<td>' + element.id + '</td>'
         tr += '<td>' + element.name.firstName + '</td>';
@@ -152,7 +169,6 @@ function handler(event) {
         target.style.background = '';
     }
     if (event.type == 'click') {
-        console.log(event.target.nodeName);
         if (event.target.nodeName != "A") show_editing(target);
     }
 }
@@ -188,7 +204,6 @@ function find_data(id) {
     let value = ""
     data.forEach(element => {
         if (element.id == id) {
-            console.log("Найдено!");
             value = element;
         }
     });
@@ -196,7 +211,6 @@ function find_data(id) {
 };
 
 function show_me(eventer) {
-    console.log("ID = " + eventer);
     let moreText = document.getElementById("more" + String(eventer));
     let btnText = document.getElementById("myBtn" + String(eventer));
     let tr = document.getElementById(eventer)

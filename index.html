@@ -25,6 +25,10 @@
         <label for="eyeColorCheck">Цвет глаз</label>
         <input name="column" type="checkbox" id="eyeColorCheck" value="3" onClick="toggle_column('table', this.value);"
             checked />
+        <label for="pages">Номер страницы</label>
+        <input name="column" type="number" id="pages" value="1" onchange="render(data);" />
+        <label for="elements">Количество элементов</label>
+        <input name="column" type="number" id="elements" value="20" onchange="render(data);" />
         <hr>
         <div class="table">
             <table id="table">
