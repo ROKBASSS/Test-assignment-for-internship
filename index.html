@@ -4,16 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ROKBAS Личная страница</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js"></script>
   </head>
 
   <body>
-    <div class="container">
-      <div class="head">Личная страница пользователя ROKBAS</div>
-      <div class="body">
-        Полезные ссылки:
-        <a href="test-js.html" target="_blank" rel="noopener noreferrer">Тестовое задание на стажирвоку</a>
+    <header class="pageHeader">Личная страница пользователя ROKBAS</header>
+    <article class="mainArticle" id="main">
+      Здесь что-то полезное перерисовывается с помощью JS
+    </article>
+    <nav class="mainNav">
+      <menu>
+        <div>
+          <a href="javascript:render(intership)">Стажировки</a>
+        </div>
+        <div>
+          <a href="javascript:render(links)">Полезные ссылки</a>
+        </div>
+        <div>
+          <a href="javascript:render(socials)">Профили в соц. сетях</a>
+        </div>
+      </menu>
+    </nav>
+    <div class="siteAds">Ads</div>
+    <footer class="pageFooter">
+      <div class="row">
+        Контактные данные:<br />
+        Телефон: 89087865383 <br />
+        Электронная почта: anton.fomi@ya.ru
       </div>
-      <div class="footer">Контактные данные</div>
-    </div>
+      <div class="row">
+        Образование: <br />
+        Магистратура 1 курс <br />
+        НИУ ИТМО, Веб-технологии
+      </div>
+      <div class="row">
+        Работа:<br />
+        На текущий момент не работаю
+      </div>
+    </footer>
   </body>
 </html>
