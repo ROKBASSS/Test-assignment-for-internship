@@ -208,7 +208,7 @@ function render_edit(target) {
 
 // Поиск данных по ID из скрытого id строки tr
 function find_data(id) {
-    let value = ""
+    let value;
     data.forEach(element => {
         if (element.id == id) {
             value = element;
