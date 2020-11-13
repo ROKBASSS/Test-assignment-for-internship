@@ -1,47 +1,192 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ROKBAS Личная страница</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/index.js"></script>
-  </head>
+<html>
 
-  <body>
-    <header class="pageHeader">Личная страница пользователя ROKBAS</header>
-    <article class="mainArticle" id="main">
-      Здесь что-то полезное перерисовывается с помощью JS
-    </article>
-    <nav class="mainNav">
-      <menu>
-        <div>
-          <a href="javascript:render(intership)">Стажировки</a>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Микромусорка</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Features-Blue.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
+        <div class="container"><a class="navbar-brand" href="#" style="font-family: 'Comfortaa', cursive;font-size: 30px;"><img style="background: url(&quot;assets/img/logo_black.gif&quot;);background-size: contain;width: 50px;height: 50px;">&nbsp;Микромусорка</a>
+            <div class="collapse navbar-collapse"
+                id="navcol-1" style="padding: 0px;"><a class="btn btn-primary ml-auto" role="button" href="#" style="font-family: 'Comfortaa', cursive;margin: 5px;width: 120px;background: rgb(0,160,227);">О нас</a><button class="btn btn-primary" type="button" style="font-family: 'Comfortaa', cursive;margin: 5px;width: 120px;background: rgb(0,160,227);">Система</button>
+                <button
+                    class="btn btn-primary" type="button" style="font-family: 'Comfortaa', cursive;margin: 5px;width: 120px;background: rgb(0,160,227);">Услуги</button><button class="btn btn-primary" type="button" style="font-family: 'Comfortaa', cursive;margin: 5px;width: 120px;background: rgb(0,160,227);">Галерея</button><button class="btn btn-primary" type="button" style="font-family: 'Comfortaa', cursive;margin: 5px;width: 120px;background: rgb(0,160,227);">Контакты</button></div>
         </div>
-        <div>
-          <a href="javascript:render(links)">Полезные ссылки</a>
-        </div>
-        <div>
-          <a href="javascript:render(socials)">Профили в соц. сетях</a>
-        </div>
-      </menu>
     </nav>
-    <div class="siteAds">Ads</div>
-    <footer class="pageFooter">
-      <div class="row">
-        Контактные данные:<br />
-        Телефон: 89087865383 <br />
-        Электронная почта: anton.fomi@ya.ru
-      </div>
-      <div class="row">
-        Образование: <br />
-        Магистратура 1 курс <br />
-        НИУ ИТМО, Веб-технологии
-      </div>
-      <div class="row">
-        Работа:<br />
-        На текущий момент не работаю
-      </div>
+    <main>
+        <section class="call-to-action text-white text-center" style="background: url(&quot;assets/img/митинг_на_главную.jpg&quot;) center / cover no-repeat;">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <h2 class="mb-4" style="font-family: Comfortaa, cursive;">Хотите присоединиться?</h2>
+                    </div>
+                    <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg" type="email" placeholder="Введите ваш email..."></div>
+                                <div class="col-12 col-md-3" style="padding-right: 0px;padding-left: 0px;"><button class="btn btn-primary btn-lg" type="button" style="background: #00a0e3;font-family: Comfortaa, cursive;">Присоединиться</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="padding-top: 6rem;">
+            <div class="container">
+                <div class="intro">
+                    <h2 class="text-center" style="font-family: Comfortaa, cursive;">Особенности</h2>
+                    <p class="text-center" style="font-family: Roboto, sans-serif;font-size: 26px;">Преимущества для вашей компании!</p>
+                </div>
+                <div class="row features">
+                    <div class="col-sm-6 col-md-4 item"><i class="fa fa-map-marker icon"></i>
+                        <h3 class="name" style="font-family: Comfortaa, cursive;">Работает везде</h3>
+                        <p class="description" style="font-family: Roboto, sans-serif;">Наша система доступна с любого веб-браузера EDGE, CHROME, YANDEX, FIREFOX, SAFARI, OPERA. Что означает вы в любой момент можете отследить состояние ваших контейнеров.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 item"><i class="fa fa-clock-o icon"></i>
+                        <h3 class="name" style="font-family: Comfortaa, cursive;">Всегда доступно</h3>
+                        <p class="description" style="font-family: Roboto, sans-serif;">Наша система работает 24/7 чтобы предоставить вам самый лучший опыт использования современными IoT решениями</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 item"><i class="fa fa-list-alt icon"></i>
+                        <h3 class="name" style="font-family: Comfortaa, cursive;">Настриваемость</h3>
+                        <p class="description" style="font-family: Roboto, sans-serif;">Наша компания предоставляет широкие возможности индивидуальных решений для вашей компании. Если у вас есть существующие контейнеры и вы хотите подключить их к системе, обратитесь к менеджеру</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 item"><i class="fa fa-leaf icon"></i>
+                        <h3 class="name" style="font-family: Comfortaa, cursive;">Натуральность</h3>
+                        <p class="description" style="font-family: Roboto, sans-serif;">Так как ваша компания собирается или уже сортирует мусор, вы поддерживаете все Зеленые организации на территории РФ</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 item"><i class="fa fa-plane icon"></i>
+                        <h3 class="name" style="font-family: Comfortaa, cursive;">Быстрота</h3>
+                        <p class="description" style="font-family: Roboto, sans-serif;">Система работает очень быстро так как основана на современных IT и IoT решениях, которые обеспечивают круглосуточную доступность и своевременное обслуживание системы.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4 item"><i class="fa fa-phone icon"></i>
+                        <h3 class="name" style="font-family: Comfortaa, cursive;">Мобильная версия</h3>
+                        <p class="description" style="font-family: Roboto, sans-serif;">Наша система доступна со всех мобильных устройств Andoid и IOS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials text-center bg-light" style="padding-top: 6rem;">
+            <div class="container">
+                <div class="intro">
+                    <h2 class="text-center" style="font-family: Comfortaa, cursive;">Наши решения</h2>
+                    <p class="text-center" style="font-family: Roboto, sans-serif;font-size: 25px;">Здесь вы можете узнать подробнее о наших контейнерах!</p>
+                </div>
+                <div class="card-columns">
+                    <div class="card"><img class="card-img-top w-100 d-block" style="width: 300px;height: 150px;" src="assets/img/containers_0000_Слой%207.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-family: Comfortaa, cursive;"><strong>КонтейнеРУС</strong><br></h4>
+                            <p class="card-text" style="font-family: Roboto, sans-serif;">Особенные контейнеры сделанные из нержавеющей стали, по умолчанию автоматизированны, для пользования нашей системой</p><button class="btn btn-primary" type="button" style="background: #00a0e3;font-family: Comfortaa, cursive;">Заказать</button></div>
+                    </div>
+                    <div class="card"><img class="card-img-top w-100 d-block" style="width: 300px;height: 150px;" src="assets/img/containers_0003_Слой%204.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-family: Comfortaa, cursive;">Трэшмастерс</h4>
+                            <p class="card-text" style="font-family: Roboto, sans-serif;">Контейнеры трэшмастерс предназначены для установки внутри помещений, количество контейнеров обсуждается с менеджером</p><button class="btn btn-primary" type="button" style="background: #00a0e3;font-family: Comfortaa, cursive;">Заказать<br></button></div>
+                    </div>
+                    <div class="card"><img class="card-img-top w-100 d-block" style="width: 300px;height: 150px;" src="assets/img/containers_0001_Слой%206.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-family: Comfortaa, cursive;">Отконт</h4>
+                            <p class="card-text" style="font-family: Roboto, sans-serif;">Обычные металлические контейнеры, количество контейнеров уточняйте у менеджера</p><button class="btn btn-primary" type="button" style="background: #00a0e3;font-family: Comfortaa, cursive;">Заказать</button></div>
+                    </div>
+                    <div class="card"><img class="card-img-top w-100 d-block" style="width: 300px;height: 150px;" src="assets/img/containers_0004_Слой%203.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-family: Comfortaa, cursive;">Отконт 2</h4>
+                            <p class="card-text" style="font-family: Roboto, sans-serif;">Группа пластиковых контейнеров на подставке, типы контейнеров уточняйте у менеджера</p><button class="btn btn-primary" type="button" style="background: #00a0e3;font-family: Comfortaa, cursive;">Заказать</button></div>
+                    </div>
+                    <div class="card"><img class="card-img-top w-100 d-block" style="width: 300px;height: 150px;" src="assets/img/containers_0002_Слой%205.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-family: Comfortaa, cursive;">Рибли</h4>
+                            <p class="card-text" style="font-family: Roboto, sans-serif;">Контейнеры металлические Рибли, имеют откидывающуюся крышку, что придаёт особый внешний вид и шарм вашим контейнерам</p><button class="btn btn-primary" type="button" style="background: #00a0e3;font-family: Comfortaa, cursive;">Заказать<br></button></div>
+                    </div>
+                    <div class="card"><img class="card-img-top w-100 d-block" src="assets/img/rKl6abiTeXzvdnZmKjwnlfGUOVO9IlAzx1JiWPz8kR0FTjNPaoDJz01OHx5Rvx9W0LyZze7cAEpPmmDnUnV3FbjucHb1wjorqXY2cFtkJ9662G0M6nQ.webp" style="width: 300px;height: 150px;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-family: Comfortaa, cursive;"><strong>Пластикбокс</strong><br></h4>
+                            <p class="card-text" style="font-family: Roboto, sans-serif;">Множество пластиковых контейнеров на ваш вкус, которые устанавливаются на улице, количество контейнеров обсуждается с менеджером</p><button class="btn btn-primary" type="button" style="background: #00a0e3;font-family: Comfortaa, cursive;">Заказать</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="call-to-action text-white text-center" style="background: rgb(102,204,0);">
+            <div class="container">
+                <div class="row">
+                    <div class="col"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDXMZqozOiWs6ojVeW9HoYey1hiiCgaYQQ&amp;q=%D0%A2%D0%A0%D0%9A+%C2%AB%D0%9F%D0%B8%D1%82%D0%B5%D1%80+%D0%A0%D0%B0%D0%B4%D1%83%D0%B3%D0%B0%C2%BB%2C+Prospekt+Kosmonavtov%2C+Saint+Petersburg&amp;zoom=14"
+                            width="100%" height="400"></iframe></div>
+                </div>
+                <div class="row" style="padding-left: 0px;padding-right: 0px;margin-right: 0px;margin-left: 0px;">
+                    <div class="col" style="background: transparent;border-radius: 3rem;color: transparent;">
+                        <div style="background: #00a0e3;border-radius: 1rem;opacity: 1;">
+                            <h1 style="color: #ffffff;font-family: Comfortaa, cursive;">Адрес</h1>
+                            <ul class="list-unstyled" style="color: #ffffff;">
+                                <li style="font-family: Roboto, sans-serif;font-size: 18px;">г. Санкт-Петербург</li>
+                                <li style="font-family: Roboto, sans-serif;font-size: 18px;">ст. метро - Парк победы</li>
+                                <li style="font-family: Roboto, sans-serif;font-size: 18px;">ТРК "Питер-Радуга", 1 этаж</li>
+                                <li style="font-family: Roboto, sans-serif;font-size: 18px;">Пн-Вс с 10:00 до 22:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col" style="background: transparent;border-radius: 3rem;">
+                        <div style="border-radius: 1rem;background: #00a0e3;">
+                            <h1 style="color: #ffffff;font-family: Comfortaa, cursive;">Контактные данные</h1>
+                            <ul class="list-unstyled">
+                                <li style="font-family: Roboto, sans-serif;font-size: 18px;">Рабочий телефон: 84725430329</li>
+                                <li style="font-family: Roboto, sans-serif;font-size: 18px;">Почта: master@greenecology.ru</li>
+                                <li style="font-family: Roboto, sans-serif;font-size: 18px;">Бизнес-предложения:&nbsp;anton.fomi@ya.ru<br></li>
+                                <li style="font-family: Roboto, sans-serif;font-size: 18px;">Телефон: 89087865383</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer style="padding-top: 3rem;background: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 style="font-family: Comfortaa, cursive;">Компания</h3>
+                    <ul>
+                        <li><a href="#" style="font-family: Roboto, sans-serif;">Обратная связь</a></li>
+                        <li style="font-family: Roboto, sans-serif;"><a href="#" style="font-family: Roboto, sans-serif;">Корпоративные продажи</a></li>
+                        <li style="font-family: Roboto, sans-serif;"><a href="#" style="font-family: Roboto, sans-serif;">Вакансии</a></li>
+                        <li style="font-family: Roboto, sans-serif;"><a href="#" style="font-family: Roboto, sans-serif;">Новости</a></li>
+                        <li style="font-family: Roboto, sans-serif;"><a href="#" style="font-family: Roboto, sans-serif;">Правила продаж</a></li>
+                        <li style="font-family: Roboto, sans-serif;"><a href="#" style="font-family: Roboto, sans-serif;">Персональные данные</a></li>
+                        <li style="font-family: Roboto, sans-serif;"><a href="#">Партнерам</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3 style="font-family: Comfortaa, cursive;">Клиентам</h3>
+                    <ul>
+                        <li><a href="#" style="font-family: Roboto, sans-serif;">Бонусная программа</a></li>
+                        <li style="font-family: Roboto, sans-serif;"><a href="#" style="font-family: Roboto, sans-serif;">Подарочная карта</a></li>
+                        <li style="font-family: Roboto, sans-serif;"><a href="#" style="font-family: Roboto, sans-serif;">Проверка платежей</a></li>
+                        <li style="font-family: Roboto, sans-serif;"><a href="#" style="font-family: Roboto, sans-serif;">Подарки</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3 style="font-family: Comfortaa, cursive;">Зеленая экология</h3>
+                    <p style="font-family: Roboto, sans-serif;">Мы новый стартап, который готов помочь нашей экологии с помощью умных контейнеров, сервисов и бонусных программ для пользователей контейнеров!</p><a href="#" style="margin-left: 10px;"><i class="fab fa-vk bg-light" style="font-size: 3rem;margin-left: 10px;"></i></a>
+                    <a
+                        href="#" style="margin-left: 10px;"><i class="fab fa-twitter" style="font-size: 3rem;margin-left: 10px;"></i></a><a href="#" style="margin-left: 10px;"><i class="fab fa-instagram" style="font-size: 3rem;margin-left: 10px;"></i></a><a href="#" style="margin-left: 10px;"><i class="far fa-trash-alt" style="font-size: 3rem;"></i></a></div>
+            </div>
+            <p class="copyright" style="font-family: Roboto, sans-serif;">Микромусорка © 2020</p>
+        </div>
     </footer>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
