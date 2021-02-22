@@ -1,6 +1,6 @@
 function init() {
     goss11.addEventListener("click", function () {
-        window.location.href="./labs/xml/lab11/index.xml"
+        window.location.href="./labs/xml/lab11/answer.xhtml"
     });
     goss12.addEventListener("click", function () {
         window.location.href="./labs/xml/lab12/index.xml"
