@@ -11,65 +11,67 @@
 </head>
 
 <body>
-  <h1>Пример XHTML+MathML</h1>
-  <p><a href="./index.xml" role="button" class="btn btn-primary btn-large">Transormed XML</a></p>
-  <p><a href="./index.xsl" role="button" class="btn btn-primary btn-large">XSL Instructions</a></p>
-  <p><a href="../../../labs.html">Меню</a></p>
-  <p>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <mi>σ</mi>
-      <mo>=</mo>
-      <msqrt>
-        <mrow>
-          <mfrac>
-            <mrow>
-              <mn>1</mn>
-            </mrow>
-            <mrow>
-              <mi>N</mi>
-            </mrow>
-          </mfrac>
+  <div class="container">
+    <h1>Пример XHTML+MathML</h1>
+    <p><a href="./index.xml" role="button" class="btn btn-primary btn-large">Transormed XML</a></p>
+    <p><a href="./index.xsl" role="button" class="btn btn-primary btn-large">XSL Instructions</a></p>
+    <p><a href="../../../labs.html" role="button" class="btn btn-primary btn-large">Меню</a></p>
+    <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mi>σ</mi>
+        <mo>=</mo>
+        <msqrt>
           <mrow>
-            <msubsup>
+            <mfrac>
               <mrow>
-                <mo>∑</mo>
-              </mrow>
-              <mrow>
-                <mi>i</mi>
-                <mo>=</mo>
                 <mn>1</mn>
               </mrow>
               <mrow>
                 <mi>N</mi>
               </mrow>
-            </msubsup>
+            </mfrac>
             <mrow>
-              <msup>
+              <msubsup>
                 <mrow>
-                  <mo>(</mo>
-                  <msub>
-                    <mrow>
-                      <mi>x</mi>
-                    </mrow>
-                    <mrow>
-                      <mi>i</mi>
-                    </mrow>
-                  </msub>
-                  <mo>−</mo>
-                  <mi>μ</mi>
-                  <mo>)</mo>
+                  <mo>∑</mo>
                 </mrow>
                 <mrow>
-                  <mn>2</mn>
+                  <mi>i</mi>
+                  <mo>=</mo>
+                  <mn>1</mn>
                 </mrow>
-              </msup>
+                <mrow>
+                  <mi>N</mi>
+                </mrow>
+              </msubsup>
+              <mrow>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <msub>
+                      <mrow>
+                        <mi>x</mi>
+                      </mrow>
+                      <mrow>
+                        <mi>i</mi>
+                      </mrow>
+                    </msub>
+                    <mo>−</mo>
+                    <mi>μ</mi>
+                    <mo>)</mo>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+              </mrow>
             </mrow>
           </mrow>
-        </mrow>
-      </msqrt>
-      <mo>.</mo>
-    </math>
-  </p>
+        </msqrt>
+        <mo>.</mo>
+      </math>
+    </p>
+  </div>
 </body>
 
 </html>
