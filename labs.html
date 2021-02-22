@@ -5,21 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Math Jax</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" />
     </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href='./assets/css/bootstrap.css' />
+    <script src="./labs.js"></script>
 </head>
 
 <body>
-    <script>
-        fetch('./labs/xml/lab1/index.xml').then(response => { 
-            return response.text(); 
-        }).then(data => {
-            let parser = new DOMParser(),
-            xmlDoc = parser.parseFromString(data,'text/xml');
-            console.log(xmlDoc)
-        })
-    </script>
+    <div class="container">
+        <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+            <h3>Goss Boss</h3>
+        </div>
+        <div class="btn-group me-2" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary" id="goss11">1.1</button>
+            <button type="button" class="btn btn-secondary" id="goss12">1.2</button>
+            <button type="button" class="btn btn-secondary" id="goss21">2.1</button>
+            <button type="button" class="btn btn-secondary" id="goss22">2.2</button>
+        </div>
+    </div>
 </body>
 
 </html>
