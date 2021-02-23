@@ -6,10 +6,10 @@ function init() {
         window.location.href="./labs/xml/lab12/index.xml"
     });
     goss21.addEventListener("click", function () {
-        window.location.href="./labs.html"
+        window.location.href='./labs/analyze/laba21/index.html'
     });
     goss22.addEventListener("click", function () {
-        window.location.href="./labs.html"
+        window.location.href="./labs/analyze/laba22/index.html"
     });
 }
 

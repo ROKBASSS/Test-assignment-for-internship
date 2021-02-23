@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "rokbasss.github.io",
+  "description": "- Колонки в таблице\r - Данные колонки \"about\" должны отображаться в две строки, остальное обрезаем многоточием (...);\r - Каждая колонка должна иметь свойство сортировки;\r - При клике на строку в соседнем с таблицей DIV’е отобразить форму редактирования данных выбранной строки.",
+  "version": "1.0.0",
+  "main": "labs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ROKBASSS/rokbasss.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ROKBASSS/rokbasss.github.io/issues"
+  },
+  "homepage": "https://github.com/ROKBASSS/rokbasss.github.io#readme",
+  "dependencies": {
+    "goss_proto": "^1.0.0"
+  }
+}

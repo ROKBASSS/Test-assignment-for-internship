@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FUNC-007 Рекурсивные функции</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>{
+            const sec = a => 1 + a;
+            const add = (a, b) => (b === 0) ? a : sec(add(a, b - 1));
+            const mpy = (a, b) => (b === 1) ? a : add(a, mpy(a, b - 1));
+            const pwr = (a, b) => (b > 0) ? a ** b : mpy(a, pwr(a, b - 1));
+            pwr(11, 1);
+            console.log(pwr(11,2))
+        }</script>
+
+
+        <div class="container">
+            <div>
+                <button>
+                    Press me
+                </button>
+            </div>
+        </div>
+</body>
+
+</html>
