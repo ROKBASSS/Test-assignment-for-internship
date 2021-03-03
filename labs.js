@@ -11,7 +11,9 @@ function init() {
     goss22.addEventListener("click", function () {
         window.location.href="./labs/analyze/laba22/index.html"
     });
-}
+    goss3.addEventListener("click", function () {
+        window.location.href="./labs/analyze/laba3/index.html"
+    });
 
 
 function doSomethingElse() {
