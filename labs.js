@@ -15,7 +15,6 @@ function init() {
         window.location.href="./labs/analyze/laba3/index.html"
     });
 
-
 function doSomethingElse() {
     fetch('./labs/xml/lab1/index.xml').then(response => {
         return response.text();
