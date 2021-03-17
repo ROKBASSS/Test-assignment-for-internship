@@ -1,54 +1,24 @@
+
+const sec = a => 1 + a;
+const add = (a, b) => (b === 0) ? a : sec(add(a, b - 1));
+const mpy = (a, b) => (b === 1) ? a : add(a, mpy(a, b - 1));
+const pwr = (a, b) => (b === 0) ? 1 : mpy(a, pwr(a, b - 1));
+
 function init() {
-    console.log("Page loaded.")
+    console.log("Page loaded")
+    console.log("Press underload for last stack call")
+    console.log("Press overload to pay respects")
 }
 
-function loadProfile() {
-    pwr = 0
-    mpy = 0
-    add = 0
-    sec = 0
-    var xhr = new XMLHttpRequest();
-    xhr.onload = function () {
-        console.log("rock")
-        data = xhr.responseText;
-        for (const element of data) {
-              try {
-                nodes = element['args']['data']['cpuProfile']['nodes']
-                for (const node of nodes) {
-                    if (node['callframe']['functionName'] == 'pwr') {
-                        pwr += 1;
-                        continue;
-                    };
-                    if (node['callframe']['functionName'] == 'mpy') {
-                        mpy += 1;
-                        continue;
-                    };
-                    if (node['callframe']['functionName'] == 'add') {
-                        add += 1;
-                        continue;
-                    };
-                    if (node['callframe']['functionName'] == 'sec') {
-                        sec += 1;
-                        continue;
-                    };
-                };
-            } catch (err) {
-                continue;
-            };
+function UnderLoad() {
+    console.log(pwr(2,13));
+};
 
-        };
-        console.log(pwr);
-        console.log(mpy);
-        console.log(add);
-        console.log(sec);
-
-    };
-    xhr.open('GET', './Profile-20210223T023455.json', false);
-    xhr.send();
+function OverLoad() {
+    console.log(pwr(2,14));
 };
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
     init();
-    loadProfile();
 });
